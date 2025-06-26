@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="40dp"
+                android:gravity="center_vertical"
+                android:minHeight="700dp"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btnLogout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_gravity="end"
+                    android:layout_marginBottom="20dp"
+                    android:backgroundTint="@color/button_danger"
+                    android:background="@drawable/rounded_button"
+                    android:text="Logout" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="QuizGuru"
+                    android:textAlignment="center"
+                    android:textColor="@color/mr_white"
+                    android:textSize="40sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="80dp"
+                    android:text="Admin Homepage"
+                    android:textAlignment="center"
+                    android:textColor="@color/mr_white" />
+
+                <!--Buttons-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="50dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/btnPlay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:background="@drawable/rounded_button"
+                        android:backgroundTint="@color/button_primary"
+                        android:text="Play Game"
+                        android:textColor="@color/mr_white" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:weightSum="2">
+
+                            <Button
+                                android:id="@+id/btnAddQuestion"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_marginRight="4dp"
+                                android:layout_marginBottom="8dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/rounded_button"
+                                android:backgroundTint="@color/button_primary"
+                                android:text="Add A Question"
+                                android:textColor="@color/mr_white" />
+
+                            <Button
+                                android:id="@+id/btnShowVideos"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_marginRight="4dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/rounded_button"
+                                android:backgroundTint="@color/button_primary"
+                                android:text="Show Videos"
+                                android:textColor="@color/mr_white" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:weightSum="2">
+
+                            <Button
+                                android:id="@+id/btnAddVideo"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_marginLeft="4dp"
+                                android:layout_marginBottom="8dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/rounded_button"
+                                android:backgroundTint="@color/button_primary"
+                                android:text="Add A Video"
+                                android:textColor="@color/mr_white" />
+
+                            <Button
+                                android:id="@+id/btnManageUsers"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_marginLeft="4dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/rounded_button"
+                                android:backgroundTint="@color/button_primary"
+                                android:text="Manage Users"
+                                android:textColor="@color/mr_white" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black"
+                android:layout_marginBottom="200dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Chart per Themes"
+                android:textSize="40dp"
+                android:textColor="@color/mr_white"
+                android:textStyle="bold"/>
+
+            <Spinner
+                android:id="@+id/spThemeSelect"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_button"
+                android:backgroundTint="@color/cardview_light_background"
+                android:padding="10dp"
+                android:layout_margin="20dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!--Pre and Post Scores-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pre-Test &amp; Post-Test Scores"
+                    android:textSize="20dp"
+                    android:textColor="@color/mr_white"
+                    android:textStyle="bold"/>
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/bcPreVsPost"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_margin="24dp"
+                    android:background="@drawable/rounded_button"
+                    android:backgroundTint="@color/cardview_light_background"/>
+                <TextView
+                    android:id="@+id/tvThemeChartErr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="300dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="24dp"
+                    android:textColor="@color/mr_white"
+                    android:text="Currently this theme has no data."/>
+                <TextView
+                    android:id="@+id/tvThemeChartDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/mr_white"
+                    android:text="Chart Description"/>
+
+                <!--Drills-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Drills per Video Attempts"
+                    android:textSize="20dp"
+                    android:textColor="@color/mr_white"
+                    android:textStyle="bold"
+                    android:layout_marginTop="50dp"/>
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/bcDrillsChart"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_margin="24dp"
+                    android:background="@drawable/rounded_button"
+                    android:backgroundTint="@color/cardview_light_background"/>
+                <TextView
+                    android:id="@+id/tvDrillChartErr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="300dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="24dp"
+                    android:textColor="@color/mr_white"
+                    android:text="Currently this theme has no data."/>
+                <TextView
+                    android:id="@+id/tvDrillChartDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/mr_white"
+                    android:text="Chart Description"/>
+
+                <!--Results-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Status of all players"
+                    android:textColor="@color/mr_white"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="50dp"/>
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/pcResultChart"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_margin="24dp"/>
+                <TextView
+                    android:id="@+id/tvResultChartErr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="300dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="24dp"
+                    android:textColor="@color/mr_white"
+                    android:text="Currently this theme has no data."/>
+                <TextView
+                    android:id="@+id/tvResultChartDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/mr_white"
+                    android:text="Chart Description"/>
+
+                <!--Results-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Summary"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/mr_white"
+                    android:layout_marginTop="50dp"
+                    android:textAlignment="center"/>
+                <TextView
+                    android:id="@+id/tvChartSummary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="viewStart"
+                    android:justificationMode="inter_word"
+                    android:text="Summary"
+                    android:alpha="1"
+                    android:padding="20dp"
+                    android:textColor="@color/mr_white"
+                    android:layout_marginBottom="100dp"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

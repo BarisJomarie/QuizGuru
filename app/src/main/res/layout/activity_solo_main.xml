@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center"
+        android:background="@color/background_color">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="QuizGuru"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textColor="@color/mr_white"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Solo Mode: Main"
+            android:layout_marginBottom="80dp"
+            android:textAlignment="center"
+            android:textColor="@color/mr_white"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Difficulty: "
+                    android:textColor="@color/mr_white"/>
+
+                <RadioGroup
+                    android:id="@+id/rgDifficulty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rdDEasy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Easy"
+                        android:textColor="@color/mr_white"/>
+                    <RadioButton
+                        android:id="@+id/rdDMedium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Medium"
+                        android:textColor="@color/mr_white"/>
+                    <RadioButton
+                        android:id="@+id/rdDHard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hard"
+                        android:textColor="@color/mr_white"/>
+
+                </RadioGroup>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvError"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/red"
+                android:textAlignment="center"
+                android:textSize="10sp"/>
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btnStart"
+            android:layout_width="187dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/rounded_button"
+            android:text="Start Game"
+            android:textColor="@color/mr_white" />
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="189dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_button"
+            android:text="Cancel"
+            android:textColor="@color/mr_white" />
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <Button
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="2dp"
+                android:text="Back"
+                android:background="@drawable/rounded_button"
+                android:textColor="@color/mr_white"/>
+
+            <Button
+                android:id="@+id/btnTestQuestion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:text="Test Questions"
+                android:background="@drawable/rounded_button"
+                android:textColor="@color/mr_white"/>
+            <Button
+                android:id="@+id/btnDrillQuestion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Drill Questions"
+                android:background="@drawable/rounded_button"
+                android:textColor="@color/mr_white"/>
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tvVideoName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_margin="20dp"
+            android:text="Video Name: "
+            android:textColor="@color/mr_white"/>
+
+        <Button
+            android:id="@+id/btnAdd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Question"
+            android:background="@drawable/rounded_button"
+            android:textColor="@color/mr_white"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvViewQuestions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvViewDrill"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginTop="12dp"/>
+
+        <LinearLayout
+            android:id="@+id/loadingOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvNoQuestionFetched"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Theres no question at the moment...."
+            android:textColor="@color/mr_white"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="QuizGuru"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textColor="@color/mr_white"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="User Homepage"
+        android:textAlignment="center"
+        android:textColor="@color/mr_white"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="Choose Theme: "
+        android:textAlignment="center"
+        android:layout_marginTop="24dp"
+        android:textColor="@color/mr_white"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnCropAndPLants"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginBottom="2.5dp"
+            android:layout_marginRight="2.5dp"
+            android:text="Crops &amp; Plants"
+            android:background="@drawable/rounded_button"
+            android:textColor="@color/mr_white"/>
+        <Button
+            android:id="@+id/btnFruitsAndVeg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginBottom="2.5dp"
+            android:layout_marginLeft="2.5dp"
+            android:text="Fruits &amp; Vegetables"
+            android:background="@drawable/rounded_button"
+            android:textColor="@color/mr_white"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnFarmAnimals"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="2.5dp"
+            android:layout_marginBottom="2.5dp"
+            android:layout_marginRight="2.5dp"
+            android:layout_weight="1"
+            android:text="Farm Animals"
+            android:background="@drawable/rounded_button"
+            android:textColor="@color/mr_white"/>
+        <Button
+            android:id="@+id/btnSoilAndFert"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginTop="2.5dp"
+            android:layout_marginBottom="2.5dp"
+            android:layout_marginLeft="2.5dp"
+            android:text="Soil and Fertilizers"
+            android:background="@drawable/rounded_button"
+            android:textColor="@color/mr_white"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnToolsAndMachines"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginTop="2.5dp"
+            android:layout_marginRight="2.5dp"
+            android:text="Agriculture Tools and Machines"
+            android:background="@drawable/rounded_button"
+            android:textColor="@color/mr_white"/>
+        <Button
+            android:id="@+id/btnPestsAndPlantDiseases"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="2.5dp"
+            android:layout_marginLeft="2.5dp"
+            android:layout_weight="1"
+            android:text="PEsts &amp; Plants Diseases"
+            android:background="@drawable/rounded_button"
+            android:textColor="@color/mr_white"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="195dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2.5dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/rounded_button"
+        android:text="Logout"
+        android:backgroundTint="@color/button_danger"
+        android:textColor="@color/mr_white"/>
+
+    <Button
+        android:id="@+id/btnAdmin"
+        android:layout_width="194dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2.5dp"
+        android:background="@drawable/rounded_button"
+        android:text="back to admin homepage"
+        android:textColor="@color/mr_white" />
+</LinearLayout>

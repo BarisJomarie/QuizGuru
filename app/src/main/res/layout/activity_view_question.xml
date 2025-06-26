@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/background_color"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="QuizGuru"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:layout_marginTop="80dp"
+            android:textColor="@color/mr_white"
+            android:textAlignment="center"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Show Questions"
+            android:textColor="@color/mr_white"
+            android:textAlignment="center"/>
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:background="@drawable/rounded_button"
+            android:textColor="@color/mr_white"
+            android:layout_gravity="start"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="All Questions"
+            android:textColor="@color/mr_white"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+        
+        <Spinner
+            android:id="@+id/spTheme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_button"
+            android:backgroundTint="@color/cardview_light_background"
+            android:padding="10dp"/>
+
+
+<!--    etong widget is para sa retreival ng mga question dito mo ilabas yung mga questions na nasa firestore-->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvViewQuestions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"/>
+
+        <LinearLayout
+            android:id="@+id/loadingOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvNoQuestion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Theres no questions :("
+            android:visibility="gone"/>
+
+    </LinearLayout>
+</FrameLayout>

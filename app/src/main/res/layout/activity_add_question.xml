@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="QuizGuru"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textColor="@color/mr_white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add Question"
+                android:textAlignment="center"
+                android:textColor="@color/mr_white" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <Button
+                    android:id="@+id/btnBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Back"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/rounded_button"
+                    android:textColor="@color/mr_white"/>
+
+                <Button
+                    android:id="@+id/btnSwitchToDrill"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:text="Switch to Drill"
+                    android:background="@drawable/rounded_button"
+                    android:textColor="@color/mr_white"/>
+                <Button
+                    android:id="@+id/btnSwitchtoQuestion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:visibility="gone"
+                    android:text="Switch to Question"
+                    android:background="@drawable/rounded_button"
+                    android:textColor="@color/mr_white"/>
+            </LinearLayout>
+
+            <Spinner
+                android:id="@+id/spVideoSelector"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:background="@drawable/rounded_button"
+                android:backgroundTint="@color/mr_white"/>
+
+            <TextView
+                android:id="@+id/tvVideoErr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/red" />
+
+            <!-- Multiple Question layout -->
+            <LinearLayout
+                android:id="@+id/questionLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/etQuestion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Question"
+                    android:textColor="@color/mr_white"
+                    android:textColorHint="@color/mr_white" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="10dp">
+
+                    <EditText
+                        android:id="@+id/etOptionA"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Option A"
+                        android:textColor="@color/mr_white"
+                        android:textColorHint="@color/mr_white" />
+
+                    <EditText
+                        android:id="@+id/etOptionB"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Option B"
+                        android:textColor="@color/mr_white"
+                        android:textColorHint="@color/mr_white" />
+
+                    <EditText
+                        android:id="@+id/etOptionC"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Option C"
+                        android:textColor="@color/mr_white"
+                        android:textColorHint="@color/mr_white" />
+
+                    <EditText
+                        android:id="@+id/etOptionD"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Option D"
+                        android:textColor="@color/mr_white"
+                        android:textColorHint="@color/mr_white" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Correct Answer: "
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/mr_white" />
+
+                <RadioGroup
+                    android:id="@+id/rdCorrectAnswer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="start">
+
+                    <RadioButton
+                        android:id="@+id/rdA"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="A"
+                        android:textColor="@color/mr_white" />
+
+                    <RadioButton
+                        android:id="@+id/rdB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="B"
+                        android:textColor="@color/mr_white" />
+
+                    <RadioButton
+                        android:id="@+id/rdC"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="C"
+                        android:textColor="@color/mr_white" />
+
+                    <RadioButton
+                        android:id="@+id/rdD"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="D"
+                        android:textColor="@color/mr_white" />
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/tvRadioErr1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/red"
+                    android:textSize="10sp"
+                    android:layout_gravity="start" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Difficulty Level: "
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/mr_white" />
+
+                <RadioGroup
+                    android:id="@+id/rdDifficulty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="start">
+
+                    <RadioButton
+                        android:id="@+id/rdEasy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Easy"
+                        android:textColor="@color/mr_white" />
+
+                    <RadioButton
+                        android:id="@+id/rdMedium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Medium"
+                        android:textColor="@color/mr_white" />
+
+                    <RadioButton
+                        android:id="@+id/rdHard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hard"
+                        android:textColor="@color/mr_white" />
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/tvRadioErr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/red"
+                    android:textSize="10sp"
+                    android:layout_gravity="start"
+                    android:paddingLeft="10dp" />
+
+                <EditText
+                    android:id="@+id/etFacts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Fun Facts"
+                    android:inputType="textMultiLine"
+                    android:minLines="4"
+                    android:gravity="top|start"
+                    android:textColor="@color/mr_white"
+                    android:textColorHint="@color/mr_white" />
+
+                <EditText
+                    android:id="@+id/etReferences"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="References (place , when multiple references)"
+                    android:inputType="textMultiLine"
+                    android:minLines="4"
+                    android:gravity="top|start"
+                    android:textColor="@color/mr_white"
+                    android:textColorHint="@color/mr_white" />
+
+                <Button
+                    android:id="@+id/btnAddQuestion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="Add Question"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/rounded_button"
+                    android:textColor="@color/mr_white" />
+
+                <Button
+                    android:id="@+id/btnClear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Clear"
+                    android:background="@drawable/rounded_button"
+                    android:textColor="@color/mr_white" />
+            </LinearLayout>
+
+            <!-- Fill in the blank -->
+            <LinearLayout
+                android:id="@+id/drillLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/etDrillQuestion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Question"
+                    android:textColor="@color/mr_white"
+                    android:textColorHint="@color/mr_white" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="12dp"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="10dp">
+
+                    <EditText
+                        android:id="@+id/etDrillOption1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Option 1"
+                        android:textColor="@color/mr_white"
+                        android:textColorHint="@color/mr_white" />
+
+                    <EditText
+                        android:id="@+id/etDrillOption2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Option 2"
+                        android:textColor="@color/mr_white"
+                        android:textColorHint="@color/mr_white" />
+
+                    <EditText
+                        android:id="@+id/etDrillOption3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Option 3"
+                        android:textColor="@color/mr_white"
+                        android:textColorHint="@color/mr_white" />
+
+                    <EditText
+                        android:id="@+id/etDrillOption4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Option 4"
+                        android:textColor="@color/mr_white"
+                        android:textColorHint="@color/mr_white" />
+
+                    <EditText
+                        android:id="@+id/etDrillOption5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Option 5"
+                        android:textColor="@color/mr_white"
+                        android:textColorHint="@color/mr_white" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Correct Answer/s (Max 3):"
+                    android:textColor="@color/mr_white" />
+
+                <CheckBox
+                    android:id="@+id/cbDrill1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Option 1"
+                    android:checked="false"
+                    android:textColor="@color/mr_white" />
+
+                <CheckBox
+                    android:id="@+id/cbDrill2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Option 2"
+                    android:checked="false"
+                    android:textColor="@color/mr_white" />
+
+                <CheckBox
+                    android:id="@+id/cbDrill3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Option 3"
+                    android:checked="false"
+                    android:textColor="@color/mr_white" />
+
+                <CheckBox
+                    android:id="@+id/cbDrill4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Option 4"
+                    android:checked="false"
+                    android:textColor="@color/mr_white" />
+
+                <CheckBox
+                    android:id="@+id/cbDrill5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Option 5"
+                    android:checked="false"
+                    android:textColor="@color/mr_white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Difficulty: "
+                    android:textColor="@color/mr_white" />
+
+                <RadioGroup
+                    android:id="@+id/rgDrillDifficulty"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rbDrillEasy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Easy"
+                        android:textColor="@color/mr_white" />
+
+                    <RadioButton
+                        android:id="@+id/rbDrillMedium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Medium"
+                        android:textColor="@color/mr_white" />
+
+                    <RadioButton
+                        android:id="@+id/rbDrillHard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hard"
+                        android:textColor="@color/mr_white" />
+                </RadioGroup>
+
+                <Button
+                    android:id="@+id/btnDrillAdd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="Add"
+                    android:background="@drawable/rounded_button"
+                    android:textColor="@color/mr_white" />
+
+                <Button
+                    android:id="@+id/btnDrillClear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Clear"
+                    android:background="@drawable/rounded_button"
+                    android:textColor="@color/mr_white" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/loadingOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/overlay"
+        android:gravity="center"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "790975350126",
+    "project_id": "quizguru3c4444",
+    "storage_bucket": "quizguru3c4444.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:790975350126:android:780c6f06f453b6dcf0ad7f",
+        "android_client_info": {
+          "package_name": "com.example.quizguru"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1iid04Qn0CJK0db2jDD5XiB-eeUmDrRw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

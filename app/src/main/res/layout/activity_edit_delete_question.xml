@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="24dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="QuizGuru"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textColor="@color/mr_white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Edit Question"
+                android:layout_marginBottom="40dp"
+                android:textAlignment="center"
+                android:textColor="@color/mr_white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:text="Question UID:"
+                android:textColor="@color/mr_white" />
+
+            <TextView
+                android:id="@+id/tvQuestionUID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:text="Unknown"
+                android:focusable="false"
+                android:enabled="false"
+                android:textColor="@color/mr_white" />
+
+            <EditText
+                android:id="@+id/etEditQuestion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Question"
+                android:textColor="@color/mr_white" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Question"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/mr_white" />
+
+            <EditText
+                android:id="@+id/etEditOptionA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="option A"
+                android:textColor="@color/mr_white" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Option A"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/mr_white" />
+
+            <EditText
+                android:id="@+id/etEditOptionB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="option B"
+                android:textColor="@color/mr_white" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Option B"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/mr_white" />
+
+            <EditText
+                android:id="@+id/etEditOptionC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="option C"
+                android:textColor="@color/mr_white" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Option C"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/mr_white" />
+
+            <EditText
+                android:id="@+id/etEditOptionD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="option D"
+                android:textColor="@color/mr_white" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Option D"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/mr_white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="Difficulty"
+                android:textColor="@color/mr_white"
+                android:layout_gravity="start" />
+
+            <RadioGroup
+                android:id="@+id/rdEditDifficulty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="7dp">
+
+                <RadioButton
+                    android:id="@+id/rbEditEasy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Easy"
+                    android:textColor="@color/mr_white" />
+                <RadioButton
+                    android:id="@+id/rbEditMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Medium"
+                    android:textColor="@color/mr_white" />
+                <RadioButton
+                    android:id="@+id/rbEditHard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Hard"
+                    android:textColor="@color/mr_white" />
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="7dp"
+                android:text="Save Changes"
+                android:background="@drawable/rounded_button"
+                android:textColor="@color/mr_white"
+                android:enabled="false" />
+            <Button
+                android:id="@+id/btnCancel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="7dp"
+                android:text="Cancel"
+                android:background="@drawable/rounded_button"
+                android:textColor="@color/mr_white" />
+
+            <Button
+                android:id="@+id/btnDelete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:text="Delete"
+                android:background="@drawable/rounded_button"
+                android:backgroundTint="@color/button_danger"
+                android:textColor="@color/mr_white" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/loadingOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:background="@color/overlay"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="24dp"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="QuizGuru"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                android:textColor="@color/mr_white"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Performance Result"
+                android:textAlignment="center"
+                android:textColor="@color/mr_white"
+                android:layout_marginBottom="20dp" />
+
+            <TextView
+                android:id="@+id/tvComparison"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAlignment="center"
+                android:textSize="50sp"
+                android:textColor="@color/mr_white"
+                android:layout_marginBottom="20dp"
+                android:text="Performance"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:text="Score Summary"
+                android:textAlignment="center"
+                android:textColor="@color/mr_white"/>
+
+            <!-- Score Breakdown -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:orientation="vertical"
+                android:background="@drawable/rounded_button">
+
+                <!-- Difficulty -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="10dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Difficulty"
+                        android:textSize="15sp"
+                        android:layout_weight="1"
+                        android:textColor="@color/mr_white"
+                        android:textAlignment="textStart"/>
+
+                    <TextView
+                        android:id="@+id/tvDifficulty"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Unknown"
+                        android:textSize="15sp"
+                        android:layout_weight="1"
+                        android:textColor="@color/mr_white"
+                        android:textAlignment="textEnd"/>
+                </LinearLayout>
+
+                <!-- Theme -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="10dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Theme"
+                        android:textSize="15sp"
+                        android:layout_weight="1"
+                        android:textColor="@color/mr_white"
+                        android:textAlignment="textStart"/>
+
+                    <TextView
+                        android:id="@+id/tvTheme"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Unknown"
+                        android:textSize="15sp"
+                        android:layout_weight="1"
+                        android:textColor="@color/mr_white"
+                        android:textAlignment="textEnd"/>
+                </LinearLayout>
+
+                <!-- Pre-Test Score -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="10dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pre-Test Score"
+                        android:textSize="15sp"
+                        android:layout_weight="1"
+                        android:textColor="@color/mr_white"
+                        android:textAlignment="textStart"/>
+
+                    <TextView
+                        android:id="@+id/tvPreTestScore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="15sp"
+                        android:layout_weight="1"
+                        android:textColor="@color/mr_white"
+                        android:textAlignment="textEnd"/>
+                </LinearLayout>
+
+                <!-- Post-Test Score -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="10dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Post-Test Score"
+                        android:textSize="15sp"
+                        android:layout_weight="1"
+                        android:textColor="@color/mr_white"
+                        android:textAlignment="textStart"/>
+
+                    <TextView
+                        android:id="@+id/tvPostTestScore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="15sp"
+                        android:layout_weight="1"
+                        android:textColor="@color/mr_white"
+                        android:textAlignment="textEnd"/>
+                </LinearLayout>
+
+                <!-- Performance Score -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="10dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Performance Score"
+                        android:textSize="15sp"
+                        android:layout_weight="1"
+                        android:textColor="@color/mr_white"
+                        android:textAlignment="textStart"/>
+
+                    <TextView
+                        android:id="@+id/tvPerformanceScore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0.0"
+                        android:textSize="15sp"
+                        android:layout_weight="1"
+                        android:textColor="@color/mr_white"
+                        android:textAlignment="textEnd"/>
+                </LinearLayout>
+
+                <!-- Description -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="10dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Description"
+                        android:textSize="15sp"
+                        android:layout_weight="1"
+                        android:textColor="@color/mr_white"
+                        android:textAlignment="textStart"/>
+
+                    <TextView
+                        android:id="@+id/tvPerformanceDescription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Unknown"
+                        android:textSize="15sp"
+                        android:layout_weight="1"
+                        android:textColor="@color/mr_white"
+                        android:textAlignment="textEnd"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Placeholder Pre/Post Score Charts -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_marginBottom="10dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical" />
+            </LinearLayout>
+
+            <!-- Video Breakdown -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:weightSum="3"
+                android:background="@drawable/rounded_button">
+
+                <!-- Video 1 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/tvVideo1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Video 1"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/mr_white"/>
+
+                    <LinearLayout
+                        android:id="@+id/video1Breakdown"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp"/>
+                </LinearLayout>
+
+                <!-- Video 2 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/tvVideo2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Video 2"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/mr_white"/>
+
+                    <LinearLayout
+                        android:id="@+id/video2Breakdown"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp"/>
+                </LinearLayout>
+
+                <!-- Video 3 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvVideo3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Video 3"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/mr_white"/>
+
+                    <LinearLayout
+                        android:id="@+id/video3Breakdown"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Button -->
+            <Button
+                android:id="@+id/btnFinish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:padding="10dp"
+                android:background="@drawable/rounded_button"
+                android:text="Back to Home"
+                android:textColor="@color/mr_white"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
